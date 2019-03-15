@@ -1,0 +1,20 @@
+
+
+<h1>My list of cocktails</h1>
+
+<div class="row">
+<% @cocktails.each do |cocktail| %>
+  <div class="col-4 d-flex"> <!-- align-items-stretch -->
+  <div class="cocktail-card d-flex flex-column">
+    <div class = "cocktail-card-content">
+      <h3><%= cocktail.name %></h3>
+    </div>
+    <div class = "cocktail-card-bottom mt-auto">
+      <%= link_to "See details", cocktail_path(cocktail) %>
+    </div>
+  </div>
+  </div>
+<% end %>
+</div>
+
+<div><%= link_to "Add a new cocktail", new_cocktail_path %></
