@@ -1,11 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.3'
+ruby '2.4.4'
 
-gem 'autoprefixer-rails'
-gem 'font-awesome-sass', '~> 5.6.1'
-gem 'simple_form'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
@@ -26,8 +23,10 @@ gem 'webpacker'
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
+
+gem 'mime-types', '~> 2.6.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+#gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -42,10 +41,17 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+#gem 'autoprefixer-rails'
+#gem 'font-awesome-sass', '~> 5.6.1'
+gem 'simple_form'
+# gem 'cloudinary', '~> 1.9.1'
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'dotenv-rails', groups: [:development, :test]
+  gem 'dotenv-rails'
 end
 
 group :development do
